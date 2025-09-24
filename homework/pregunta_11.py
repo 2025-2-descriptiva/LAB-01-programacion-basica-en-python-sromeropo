@@ -16,3 +16,15 @@ def pregunta_11():
 
 
     """
+    suma_col2 = {}
+    with open("../files/input/data.csv", "r") as file:
+        for line in file:
+            campos = line.strip().split("\t")
+            valor_col2 = int(campos[1])
+            letras_col4 = campos[3].split(",")
+            for letra in letras_col4:
+                if letra not in suma_col2:
+                    suma_col2[letra] = valor_col2
+                else:
+                    suma_col2[letra] += valor_col2
+    return dict(sorted(suma_col2.items()))

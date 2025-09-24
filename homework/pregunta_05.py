@@ -15,3 +15,23 @@ def pregunta_05():
     [('A', 9, 2), ('B', 9, 1), ('C', 9, 0), ('D', 8, 3), ('E', 9, 1)]
 
     """
+    with open("../files/input/data.csv", "r") as file:
+        data = file.readlines()
+
+    result = {}
+    for line in data:
+        parts = line.strip().split("\t")
+        print(parts)
+        letter = parts[0]
+        number = int(parts[1])
+
+        if letter not in result:
+            result[letter] = [number, number]  # [max, min]
+        else:
+            if number > result[letter][0]:
+                result[letter][0] = number
+            if number < result[letter][1]:
+                result[letter][1] = number
+
+    final_result = [(key, value[0], value[1]) for key, value in sorted(result.items())]
+    return final_result
