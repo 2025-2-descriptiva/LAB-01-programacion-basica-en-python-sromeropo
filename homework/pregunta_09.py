@@ -25,7 +25,7 @@ def pregunta_09():
 
     """
     claves = {}
-    with open("../files/input/data.csv", "r") as file:
+    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
         for line in file:
             campos = line.strip().split("\t")
             diccionario = campos[4].split(",")

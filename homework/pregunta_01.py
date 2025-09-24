@@ -14,7 +14,7 @@ def pregunta_01():
     214
 
     """
-    with open("../files/input/data.csv", "r") as file:
+    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
         total = 0
         for line in file:
             total += int(line.split("\t")[1])

@@ -15,7 +15,7 @@ def pregunta_02():
     [('A', 8), ('B', 7), ('C', 5), ('D', 6), ('E', 14)]
 
     """
-    with open("../files/input/data.csv", "r") as file:
+    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
         counts = {}
         for line in file:
             letter = line[0]

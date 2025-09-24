@@ -26,7 +26,7 @@ def pregunta_04():
      ('12', 3)]
 
     """
-    with open("../files/input/data.csv", "r") as file:
+    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
         month_counts = {}
         for line in file:
             date = line.split("\t")[2]
