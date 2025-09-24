@@ -5,6 +5,7 @@ solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
 
+import pathlib
 
 def pregunta_08():
     """
@@ -27,8 +28,12 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
+
+    current_path = pathlib.Path(__file__).parent
+    data_file = current_path.parent / "files/input/data.csv"
+
     resultado = {}
-    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
+    with open(data_file, "r") as file:
         for line in file:
             campos = line.strip().split("\t")
             letra = campos[0]

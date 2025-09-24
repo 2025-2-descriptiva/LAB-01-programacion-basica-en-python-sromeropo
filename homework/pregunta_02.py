@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+import pathlib
 
 def pregunta_02():
     """
@@ -15,7 +15,10 @@ def pregunta_02():
     [('A', 8), ('B', 7), ('C', 5), ('D', 6), ('E', 14)]
 
     """
-    with open("c:/GitHub/Descriptiva/LAB-01-programacion-basica-en-python-sromeropo/files/input/data.csv", "r") as file:
+    current_path = pathlib.Path(__file__).parent
+    data_file = current_path.parent / "files/input/data.csv"
+
+    with open(data_file, "r") as file:
         counts = {}
         for line in file:
             letter = line[0]
